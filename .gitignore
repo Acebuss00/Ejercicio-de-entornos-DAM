@@ -1,0 +1,14 @@
+# Compilados
+*.class
+bin/
+target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
