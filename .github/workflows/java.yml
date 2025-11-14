@@ -1,0 +1,24 @@
+name: Ejecutar HelloWorld
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    
+    - name: Compilar
+      run: javac -d bin src/main/java/com/ejemplo/HelloWorld.java
+    
+    - name: Ejecutar HelloWorld
+      run: java -cp bin com.ejemplo.HelloWorld
